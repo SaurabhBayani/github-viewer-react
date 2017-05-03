@@ -35,8 +35,8 @@ class Card extends React.Component {
                                         <td>{this.state.public_repos}</td>
                                     </tr>
                                     <tr>
-                                        <td>Follower</td>
-                                        <td>{this.state.followers}</td>
+                                        <td>Url</td>
+                                        <td><a href={this.state.url}>{this.state.url}</a></td>
                                     </tr>
                                 </tbody>
                             </table>
