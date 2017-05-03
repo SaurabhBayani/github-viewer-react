@@ -10,10 +10,14 @@ class Form extends React.Component {
     }
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" placeholder="Add User" ref="login" />
-                    <button>Add</button>
+            <div className='row'>
+                <form className='form' onSubmit={this.handleSubmit}>
+                    <div className="col-md-10">
+                        <input className='form-control' type="text" placeholder="Add User" ref="login" />
+                    </div>
+                    <div className="col-md-1">
+                        <button className='btn btn-primary'>Add</button>
+                    </div>
                 </form>
             </div>
         )

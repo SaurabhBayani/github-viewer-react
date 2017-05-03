@@ -13,11 +13,38 @@ class Card extends React.Component {
 
     render() {
         return (
-            <div>
-                <img src={this.state.avatar_url} alt="" width="80" />
-                <h3>Name : {this.state.name}</h3>
-                <hr />
-            </div>
+            <tr>
+                <td>
+                    <div className='row'>
+                        <div className='col-md-2'>
+                            <img src={this.state.avatar_url} alt="" width="120" />
+                        </div>
+                        <div className="col-md-10">
+                            <table className="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td>{this.state.name}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Location</td>
+                                        <td>{this.state.location}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Repos</td>
+                                        <td>{this.state.public_repos}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Follower</td>
+                                        <td>{this.state.followers}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <hr />
+                    </div>
+                </td>
+            </tr>
         )
     }
 }

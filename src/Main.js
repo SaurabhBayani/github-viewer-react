@@ -6,12 +6,12 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      logins: []
+      logins: ['angular', 'reactjs', 'extjs', 'jQuery']
     }
   }
 
   addUser = (userName) => {
-    this.setState({logins: this.state.logins.concat(userName)});
+    this.setState({ logins: this.state.logins.concat(userName) });
   }
 
   render() {
@@ -20,10 +20,16 @@ class App extends Component {
     });
 
     return (
-      <div>
-        <Form addUser={this.addUser}/>
-        <hr />
-        {cards}
+      <div className='container'>
+        <br />
+        <Form addUser={this.addUser} />
+        <br />
+        <table className="table table-bordered table-striped">
+          <tbody>
+            {cards}
+          </tbody>
+        </table>
+
       </div>
     );
   }
